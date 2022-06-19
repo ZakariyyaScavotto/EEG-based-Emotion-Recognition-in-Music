@@ -13,7 +13,7 @@ Finalized repository of all my code for my high school senior research project, 
 - MLCode: This was the primary folder that I saved my ML code in.
   - DBN: This folder contains the code from when I tried training Deep Belief Networks (DBN) (implemented from this Github repo: https://github.com/albertbup/deep-belief-network) on the EEG data.
   - DeepSITH and SIF_Capstone: Contains code from when I tried training DeepSITH (code from https://github.com/gauvand/SIF_Capstone, https://github.com/compmem/SITH_Layer, https://github.com/compmem/DeepSITH) on the EEG data.
-  - This contains the code I used when working on training SVMs on the EEG data processed using the different feature extraction methods I used.
+  - SVM: This contains the code I used when working on training SVMs on the EEG data processed using the different feature extraction methods I used.
 - preprocessing code: This was the primary folder I saved my data processing code in
   - NOTE: In order to work with the preprocessing code, you will need to request access to the DEAP dataset and download it for use (https://www.eecs.qmul.ac.uk/mmv/datasets/deap/index.html).
 - RawDEAPBazgir: This contains the results of the raw version of the DEAP data being processed using the DWT extraction method, and saved using the pickle library. Each file represents the results for a different subject.
