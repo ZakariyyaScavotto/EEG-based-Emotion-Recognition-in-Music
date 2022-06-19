@@ -1,6 +1,6 @@
 # EEG-based-Emotion-Recognition-in-Music
 
-Finalized repository of all my code for my high school senior research project, EEG-based Emotion Recognition in Music using Machine Learning. For ease of understanding, below is an explanation of the repository's structure:
+Finalized repository of all my code for my TJ Computer Systems Lab senior research project, EEG-based Emotion Recognition in Music using Machine Learning. For ease of understanding, below is an explanation of the repository's structure:
 
 - DataReadingTesting: contains notes and code from me testing streaming data from my EMOTIV EPOC+ EEG headset to a Python program using EMOTIV's Lab Streaming Layer (LSL).
 - DEAPBazgir: : This contains the preprocessed version of DEAP processed using the Discrete Wavelet Transform (DWT) extraction method. Each file represents the results for a different subject.
