@@ -1,0 +1,27 @@
+Notes from this article: https://medium.com/black-feathers-labs/deep-belief-networks-an-introduction-1d52bb867a25
+Note: they have nice images to use
+
+Restricted Boltzmann Machines:
+    Like a binary version of factor analysis
+    "For Example: If you a read a book, and then judge that book on the scale of two: 
+        that is either you like the book or you do not like the book. 
+        In this kind of scenarios we can use RBMs, which will help us to determine the reason behind us making those choices"
+    Also known as stochastic NNs
+    3 parts:
+        1 input layer (visible unit)
+        1 hidden layer (hidden unit)
+        1 bias unit
+    Steps the RBM makes in decison process:
+        Compute activation energy
+        Calculate sigmoid of activation energy
+            gives probability, which allows hidden unit to turn on or off nodes in the visible unit
+
+Deep Belief Networks (DBNs):
+    2 phases:
+        Pre-train: Multiple layers of RBMs
+        Fine tune: A FF NN
+    How it works:
+        Find features of visbile units using Contrastive Divergence Algorithm
+            Contrastive Divergence: technique to approximate gradient using a Markov chain (https://deepai.org/machine-learning-glossary-and-terms/contrastive-divergence)
+        Find hidden unit features, as well as the feature of features found in above step
+        When hidden layer learning phase is done, DBN is trained

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- HTML for Page -->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static',filename='styles/mainpage.css') }}"
+		/>
+		<title>EEG-based Emotion Recognition in Music</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<h1 id="mainTitle">EEG-based Emotion Recognition in Music</h1>
+			<h2 id="nameTitle">By Zakariyya Scavotto, TJHSST 2022</h2>
+			<!-- <h3>Note: work in progress build, not ready to function</h3> -->
+		</div>
+
+		<div id="Demo">
+			<!-- <h1 id="spotHead">Play Music</h1> -->
+			<h1 id="emotionResult">Emotion Result</h1>
+			<h1 id="headset">Connect Headset</h1>
+			<!-- <form id="formSongSearch">
+				<label for="songInput" accesskey="g">Son<em>g</em> :</label>
+				<input type="text" id="songInput" />
+				<br />
+				<button id="formSongSearchSubmit" accesskey="s"><u>S</u>ubmit</button>
+			</form> -->
+			<div id="outputArea">
+				<p id="outputText">
+					Read the instructions, then press the 'Connect Headset' button to get
+					started.
+				</p>
+				<img
+					id="outputImage"
+					src="{{ url_for('static',filename='transparentGreenTest.png') }}"
+					alt="Emotional response"
+				/>
+			</div>
+
+			<button id="connectHeadset" accesskey="c"><u>C</u>onnect Headset</button>
+			<!-- Script for button press -->
+			<script>
+				$("#connectHeadset").click(function () {
+					//NOTE: DO NOT USE WHILE TRUE
+					$("#outputText").text("Processing, please wait...")
+					$("#outputImage").attr(
+						"src",
+						"{{ url_for('static',filename='transparentGreenTest.png') }}"
+					)
+					$.getJSON({
+						url: "/backgroundCodeTest",
+						success: function (data) {
+							console.log(data.output)
+							$("#outputText").text(data.output)
+							if (data.output === "HAPPY") {
+								$("#outputImage").attr(
+									"src",
+									"{{ url_for('static',filename='140140Happy.png') }}"
+								)
+							} else if (data.output === "SAD") {
+								$("#outputImage").attr(
+									"src",
+									"{{ url_for('static',filename='sad140140Transparent.png') }}"
+								)
+							} else if (data.output === "WORRIED") {
+								$("#outputImage").attr(
+									"src",
+									"{{ url_for('static',filename='worriedEmoji.png') }}"
+								)
+							} else if (data.output === "CALM") {
+								$("#outputImage").attr(
+									"src",
+									"{{ url_for('static',filename='calm140140.jpg') }}"
+								)
+							}
+						}
+					})
+				})
+			</script>
+		</div>
+
+		<div id="instructions">
+			<h1 id="instructionTitle">How to Use the Site</h1>
+			<p class="instructionText">
+				This is the demonstration site for the project on EEG-based Emotion
+				Recognition in Music Using Machine Learning.
+				<br />
+				To be able to take advantage of the site, there are two things that will
+				be needed, which are:
+			</p>
+			<ul class="instructionList">
+				<li>
+					An EMOTIV EEG Headset, which will be necessary to collect EEG data
+					<ul>
+						<li>
+							At the present moment, the site is not made to take in data from
+							non-EMOTIV headsets.
+						</li>
+					</ul>
+				</li>
+				<li>An EMOTIV Pro paid license</li>
+			</ul>
+			<br />
+			<!-- <p class="instructionText">
+				On the left-hand side of the demo page, you will have the option to
+				search for a particular song or piece on Spotify and play it on the site
+				directly. Again, this isn’t necessary for the core functionality of the
+				site but is available if you so desire.
+			</p> -->
+			<br />
+			<p class="instructionText">
+				On the right-hand side of the demo page, you will see a button that says
+				“Connect Headset”. Once your EMOTIV headset is connected to your
+				computer and you have started EEG data collection by sample in Emotiv
+				PRO's Lab Streaming Layer, press the connect headset button, and the
+				data from the headset will be streamed directly to the site. This data
+				will then be used by the Machine Learning Classifier to best determine
+				your current emotional reaction, which will be shown under the Emotion
+				Result heading of the site.
+			</p>
+			<br />
+		</div>
+		<h6 id="bottomProjName">
+			EEG-based Emotion Recognition in Music Using Machine Learning, Zakariyya
+			Scavotto TJHSST 2022
+		</h6>
+	</body>
+</html>

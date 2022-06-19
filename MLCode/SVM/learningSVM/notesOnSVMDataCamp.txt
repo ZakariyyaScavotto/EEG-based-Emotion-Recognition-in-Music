@@ -1,0 +1,35 @@
+Notes from: https://www.datacamp.com/community/tutorials/svm-classification-scikit-learn-python
+
+SVM: 
+    Known for kernel trick to handle non-linear inputs
+    Goal: Construct hyperplane to maximally separate classes
+        Done interatively to minimize error
+    Support vectors: data points which are closest to the hyperplane, defines separating line
+    Hyperplane: decision plane that separates objects of different classes
+    Margin: gap between the two lines on the closest class of points, perpendicular distance from line to support vectors
+        The larger the margin the better (the more distinguishable the classes are)
+
+How SVM works:
+    1) Generate hyperplanes that separate the classes in the best way
+    2) Select the hyperplane with the largest margin between points
+    Non-linear/inseparable planes:
+        SVM will use a 'kernel trick' to transform the data to a higher dimensional space
+
+SVM Kernels:
+    Kernel: transforms data into a required form
+    Kernel trick:
+        Kernel takes lower dimensional input space, transforms to a higher dimensional space
+    Types of kernels:
+        Linear: dot product between the two vectors K(x, xi) = sum(x*xi)
+        Polynomial: K(x,xi) = 1 + sum(x*xi)^d, where d is the degree of the Polynomial
+        Radial Basis Function Kernel (RBF): can map an input space into an infinite dimensional space K(x,xi) = exp(-gamma*sum((x-xi^2)))
+            Gamma: parameter from 0 to 1, the higher the better fit to the training set, but 1 can cause overfitting
+                Gamma = 0.1 considered a good default
+                Needs to be manually specified
+            This may be the solution to the multiple class problem, as the SVM could go into as high of a space as needed to distinguish the emotions
+
+Classifier Building in Scikit-learn:
+    In tutorial, will use the cancer dataset, famous multi-class classification problem
+        Has 30 features and 1 target (type of cancer)
+            Targets: malignant vs. benign
+    

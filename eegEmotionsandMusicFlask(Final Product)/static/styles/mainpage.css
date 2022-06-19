@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@600&display=swap");
+
+body {
+	/* Using the "Cool and Fresh" color scheme from
+    https://visme.co/blog/website-color-schemes/ */
+	background-color: #5cdb95;
+	color: #edf5e1;
+	font-family: "Gemunu Libre", sans-serif;
+	text-align: center;
+	margin: auto;
+}
+h1 {
+	font-weight: bold;
+}
+button,
+#connectHeadset {
+	font-family: "Gemunu Libre", sans-serif;
+}
+#connectHeadset,
+#toDemoButton,
+#back,
+#formSongSearchSubmit {
+	background-color: #8ee4af;
+	border-color: #edf5e1;
+	color: #05386b;
+}
+input:hover,
+#connectHeadset:hover {
+	cursor: pointer;
+}
+
+/* CSS Specific for Header*/
+
+#mainTitle {
+	margin-bottom: 2.5%;
+	font-size: 5em;
+}
+#nameTitle {
+	font-size: 2em;
+}
+/*CSS Specific for Demo*/
+#Demo {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: auto;
+	font-size: 1em;
+}
+
+#connectHeadset {
+	justify-self: center;
+	/* align-self: center; */
+	/* align-self: center; */
+	height: 20.4px;
+	width: 100px;
+	margin-top: 0px;
+}
+
+/* #formSongSearchSubmit {
+	margin-top: 5px;
+} */
+
+/* CSS Specific for Instructions */
+#instructions {
+	width: auto;
+	height: 550px;
+}
+#instructionTitle {
+	font-size: 5em;
+	text-align: center;
+	margin-top: 10%;
+}
+.instructionText {
+	margin: auto;
+	font-size: 1.5em;
+}
+.instructionList {
+	font-size: 1.5em;
+	display: inline-block;
+	text-align: left;
+}
+/* CSS Specific for bottom project thing */
+.bottomProjName {
+	font-size: 0.75em;
+	bottom: 5%;
+}
+#bottomProjNameDemo {
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+#outputText {
+	font-size: 20px;
+}

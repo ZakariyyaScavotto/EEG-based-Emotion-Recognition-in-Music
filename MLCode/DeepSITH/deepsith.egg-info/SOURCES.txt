@@ -1,0 +1,11 @@
+README.md
+setup.py
+deepsith/__init__.py
+deepsith/deepsith.py
+deepsith/isith.py
+deepsith.egg-info/PKG-INFO
+deepsith.egg-info/SOURCES.txt
+deepsith.egg-info/dependency_links.txt
+deepsith.egg-info/not-zip-safe
+deepsith.egg-info/requires.txt
+deepsith.egg-info/top_level.txt

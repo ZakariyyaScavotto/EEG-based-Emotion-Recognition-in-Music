@@ -1,0 +1,99 @@
+All channel arousal Accuracy: 0.609375
+All channel valence Accuracy: 0.6171875
+
+Fp1 arousal Accuracy: 0.5703125
+Fp1 valence Accuracy: 0.5572916666666666
+
+AF3 arousal Accuracy: 0.5703125
+AF3 valence Accuracy: 0.5546875
+
+F3 arousal Accuracy: 0.5703125
+F3 valence Accuracy: 0.5546875
+
+F7 arousal Accuracy: 0.6197916666666666
+F7 valence Accuracy: 0.5546875
+
+FC5 arousal Accuracy: 0.5703125
+FC5 valence Accuracy: 0.5546875
+
+FC1 arousal Accuracy: 0.5703125
+FC1 valence Accuracy: 0.5625
+
+C3 arousal Accuracy: 0.5703125
+C3 valence Accuracy: 0.5598958333333334
+
+T7 arousal Accuracy: 0.5703125
+T7 valence Accuracy: 0.5546875
+
+CP5 arousal Accuracy: 0.5703125
+CP5 valence Accuracy: 0.5442708333333334
+
+CP1 arousal Accuracy: 0.5703125
+CP1 valence Accuracy: 0.5416666666666666
+
+P3 arousal Accuracy: 0.5703125
+P3 valence Accuracy: 0.5494791666666666
+
+P7 arousal Accuracy: 0.5703125
+P7 valence Accuracy: 0.5546875
+
+PO3 arousal Accuracy: 0.5703125
+PO3 valence Accuracy: 0.5546875
+
+O1 arousal Accuracy: 0.5703125
+O1 valence Accuracy: 0.5546875
+
+Oz arousal Accuracy: 0.5703125
+Oz valence Accuracy: 0.5546875
+
+Pz arousal Accuracy: 0.5703125
+Pz valence Accuracy: 0.5546875
+
+Fp2 arousal Accuracy: 0.5703125
+Fp2 valence Accuracy: 0.5520833333333334
+
+AF4 arousal Accuracy: 0.59375
+AF4 valence Accuracy: 0.5598958333333334
+
+Fz arousal Accuracy: 0.5703125
+Fz valence Accuracy: 0.5546875
+
+F4 arousal Accuracy: 0.5703125
+F4 valence Accuracy: 0.546875
+
+F8 arousal Accuracy: 0.5703125
+F8 valence Accuracy: 0.5546875
+
+FC6 arousal Accuracy: 0.5703125
+FC6 valence Accuracy: 0.5546875
+
+FC2 arousal Accuracy: 0.5703125
+FC2 valence Accuracy: 0.5546875
+
+Cz arousal Accuracy: 0.5703125
+Cz valence Accuracy: 0.5546875
+
+C4 arousal Accuracy: 0.5703125
+C4 valence Accuracy: 0.5494791666666666
+
+T8 arousal Accuracy: 0.5703125
+T8 valence Accuracy: 0.5572916666666666
+
+CP6 arousal Accuracy: 0.5703125
+CP6 valence Accuracy: 0.5598958333333334
+
+CP2 arousal Accuracy: 0.5703125
+CP2 valence Accuracy: 0.5520833333333334
+
+P4 arousal Accuracy: 0.5703125
+P4 valence Accuracy: 0.5208333333333334
+
+P8 arousal Accuracy: 0.5703125
+P8 valence Accuracy: 0.5546875
+
+PO4 arousal Accuracy: 0.5703125
+PO4 valence Accuracy: 0.5520833333333334
+
+O2 arousal Accuracy: 0.5703125
+O2 valence Accuracy: 0.5546875
+

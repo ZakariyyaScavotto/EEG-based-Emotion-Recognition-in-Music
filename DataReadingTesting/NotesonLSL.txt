@@ -1,0 +1,51 @@
+Notes based on: https://github.com/Emotiv/labstreaminglayer
+
+Prereqs: have EmotivPRO software and license (done)
+
+Working with LSL Outlet
+    Configuration
+        Connect headset to EmotivPRO
+        Settings > LSL > Outlet
+            Stream name: Sets stream name for transmission, prefix of "EmotivDataStream-" combined with the data types
+                Most important data type for my project is EEG
+            Data stream: Choose the stream that will be transmitted, each one creates an individual LSL stream
+            Data format: Either cf_float32 or cf_double64
+                They say that float32 might not work as expected because the timestamp value is out of range, not sure if I need the timestamps though
+            Transmit type: Either sample or Chunk
+                Chunk sizes available: 4/16/32/64/128/256
+                Is Chunk like the number of points sent in a single thing?
+    Data Output Format (Note: Important ones for my project are EEG and maybe EEG-Quality)
+        Stream/Data output format/Sample rate	
+        EEG {"Timestamp", "Counter", "Interpolate", , "HardwareMarker", "Markers" }	128Hz/ 256 Hz	
+        Motion {"Timestamp", "Counter", "Interpolate", "Q0","Q1","Q2","Q3", "ACCX","ACCY","ACCZ", "MAGX","MAGY","MAGZ"} 32 Hz / 64 Hz / 128 Hz	
+        Performance-Metrics	{"Timestamp", "Engagement","Excitement","Focus","Interest ", "Relaxation","Stress"}	2 Hz for high resolution / 0.1 Hz for low resolution	
+        Contact-Quality	{"Timestamp", "BatteryPercent", "Overall", "Signal", }	2 Hz	
+        EEG-Quality	{"Timestamp","BatteryPercent","Overall","SampleRateQuality", }	2 Hz
+    
+Working with LSL Inlet:
+    Configuration
+        After setting marker via LSL, you can see the stream name in the Inlet page
+        Choose one, click connect button, should see marker being added to data stream
+    Data Input Format
+        They only support sending markers to Inlet with 2 options
+            Simple marker value: Double/int type, EmotivPRO only extracts integer part before adding to stream
+                formatted like {"MarkerValue"}
+            Marker with time for timing synchronization: Vector with 3 elements
+                MarkerTime: epoch time of the event as a double type
+                MarkerValue: same as simple marker value
+                CurrentTime: current epoch time as a double type when marker is being pushed to the inlet, later than MarkerTime
+                formatted like {"MarkerTime", "MarkerValue", "CurrentTime"}
+
+Notes on using Python with LSL (https://github.com/Emotiv/labstreaminglayer/blob/master/examples/python/readme.md)
+
+Prereqs (Both done)
+    python3 version 3.7 or later (I'm using 3.9.7)
+    install pylsl (python interface of LSL) with command 'pip install pylsl'
+
+How to send marker from Python to EMOTIV LSL Inlet:
+    Open SendMarker.py file and run (a python script in their github)
+    Open EmotivPRO and connect to 'PyMarker' stream on EmotivPRO inlet settings (they have an example)
+
+How to receive data from EMOTIV LSL Outlet (the more important one for my project)
+    Go to LSL outlet tab, choose data stream type and data format, click start button to start streaming
+    open receivedata.py file (in the github) and run
